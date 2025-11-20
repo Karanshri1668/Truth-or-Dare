@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Truth or Dare - College Edition</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Truth or Dare</h1>
+        <p class="subtitle">Let the games begin!</p>
+        
+        <!-- Home Screen -->
+        <div id="home-screen" class="screen active">
+            <h2>Add Players</h2>
+            <div class="player-input">
+                <input type="text" id="player-name" placeholder="Enter player name">
+                <button id="add-player">Add Player</button>
+            </div>
+            
+            <div class="player-list" id="player-list">
+                <p>No players added yet. Add at least 2 players to start the game.</p>
+            </div>
+            
+            <button id="start-game" class="start-btn" disabled>Start Game</button>
+        </div>
+        
+        <!-- Choice Screen -->
+        <div id="choice-screen" class="screen">
+            <h2>Choose Your Fate</h2>
+            <p>Select Truth for a revealing question or Dare for a fun challenge!</p>
+            
+            <div class="choice-container">
+                <div class="choice-btn truth-btn" id="truth-btn">
+                    <i>❓</i>
+                    <span>TRUTH</span>
+                </div>
+                <div class="choice-btn dare-btn" id="dare-btn">
+                    <i>⚡</i>
+                    <span>DARE</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Game Screen -->
+        <div id="game-screen" class="screen">
+            <h2 id="game-type">Truth</h2>
+            <div class="selected-player" id="selected-player">Player Name</div>
+            
+            <div class="question-container">
+                <p id="question-text">Question will appear here</p>
+            </div>
+            
+            <div class="game-controls">
+                <button id="next-btn" class="control-btn next-btn">Next Player</button>
+                <button id="new-game-btn" class="control-btn new-game-btn">New Game</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
